@@ -6,10 +6,10 @@ Proyek ini adalah implementasi sistem registrasi mahasiswa yang dibangun menggun
 ### 1. Penerapan Logging (Menggantikan Print)
 Seluruh fungsi `print()` telah diganti dengan modul `logging` Python untuk memberikan output yang lebih informatif.
 * **Format Log:** `%(asctime)s %(levelname)s - %(name)s - %(message)s`
-* **Penerapan pada Bagian C (`order_logging.py`):**
+* **Penerapan pada Bagian Langkah Langkah Praktikum (`order_logging.py`):**
     * Mencatat proses pembayaran kartu kredit.
     * Mencatat pengiriman notifikasi email.
-* **Penerapan pada Bagian D (`registrasi_logging.py`):**
+* **Penerapan pada Bagian Latihan Mandiri (`registrasi_logging.py`):**
     * **INFO:** Mencatat alur normal (Contoh: "Validasi SKS: OK").
     * **WARNING:** Mencatat validasi yang gagal (Contoh: "SKS melebihi batas").
     * **ERROR:** Mencatat kegagalan fatal saat registrasi ditolak.
