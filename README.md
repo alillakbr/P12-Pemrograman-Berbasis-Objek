@@ -3,22 +3,25 @@
 ## Deskripsi Proyek
 Proyek ini adalah implementasi sistem registrasi mahasiswa yang dibangun menggunakan prinsip desain **SOLID** (SRP, OCP, dan DIP). 
 
-Pada versi ini (Pertemuan 12), kode telah ditingkatkan kualitas komunikasinya dengan menambahkan:
-1. **Logging**: Menggantikan fungsi `print()` biasa dengan modul `logging` Python untuk pencatatan aktivitas sistem yang lebih profesional (mendukung level INFO, WARNING, ERROR).
-2. **Docstrings**: Dokumentasi inline pada setiap kelas dan metode menggunakan standar *Google Style* untuk memudahkan kolaborasi dan pemeliharaan kode.
+### 1. Penerapan Logging (Menggantikan Print)
+Seluruh fungsi `print()` telah diganti dengan modul `logging` Python untuk memberikan output yang lebih informatif.
+* **Format Log:** `%(asctime)s %(levelname)s - %(name)s - %(message)s`
+* **Penerapan pada Bagian C (`order_logging.py`):**
+    * Mencatat proses pembayaran kartu kredit.
+    * Mencatat pengiriman notifikasi email.
+* **Penerapan pada Bagian D (`registrasi_logging.py`):**
+    * **INFO:** Mencatat alur normal (Contoh: "Validasi SKS: OK").
+    * **WARNING:** Mencatat validasi yang gagal (Contoh: "SKS melebihi batas").
+    * **ERROR:** Mencatat kegagalan fatal saat registrasi ditolak.
 
-## Struktur File
-- **`registrasi_logging.py`**: File kode utama yang berisi:
-  - **Model**: `Student`
-  - **Interfaces**: `IValidationRule`
-  - **Rules**: `SksLimitRule`, `PrerequisiteRule`, `JadwalBentrokRule`
-  - **Service**: `RegistrationService`
-- **`README.md`**: File dokumentasi proyek (file ini).
+### 2. Google Style Docstrings
+Setiap Kelas, Interface, dan Metode pada kedua file telah dilengkapi dokumentasi inline.
+* **Deskripsi:** Penjelasan singkat tentang tanggung jawab kelas/fungsi.
+* **Args:** Penjelasan tipe data dan kegunaan parameter input.
+* **Returns:** Penjelasan nilai yang dikembalikan oleh fungsi.
 
-## Prasyarat
-- Python 3.x terinstal di sistem Anda.
-
-## Cara Menjalankan
+###
+3. Cara Menjalankan
 1. Buka terminal atau command prompt.
 2. Masuk ke direktori folder proyek ini:
    ```bash
