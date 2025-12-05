@@ -17,7 +17,7 @@ Fokus utama dari tugas ini bukanlah mengubah logika bisnis (yang sudah menerapka
    Sistem Checkout E-Commerce. File ini menerapkan logging untuk proses pembayaran kartu kredit dan pengiriman notifikasi email.
 
 3. **README.md**
-   Dokumentasi teknis yang menjelaskan cara kerja proyek ini.
+   Menjelaskan isi dari Proyek.
 
 ---
 
