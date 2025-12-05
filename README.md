@@ -1,27 +1,39 @@
 # Sistem Validasi Registrasi Mahasiswa (SOLID + Logging)
 
 ## Deskripsi Proyek
-Proyek ini adalah implementasi sistem registrasi mahasiswa yang dibangun menggunakan prinsip desain **SOLID** (SRP, OCP, dan DIP). 
+Repository ini berisi implementasi sistem registrasi mahasiswa dan sistem checkout order yang telah ditingkatkan kualitas komunikasinya.
 
-### 1. Penerapan Logging (Menggantikan Print)
-Seluruh fungsi `print()` telah diganti dengan modul `logging` Python untuk memberikan output yang lebih informatif.
-* **Format Log:** `%(asctime)s %(levelname)s - %(name)s - %(message)s`
-* **Penerapan pada Bagian Langkah Langkah Praktikum (`order_logging.py`):**
-    * Mencatat proses pembayaran kartu kredit.
-    * Mencatat pengiriman notifikasi email.
-* **Penerapan pada Bagian Latihan Mandiri (`registrasi_logging.py`):**
-    * **INFO:** Mencatat alur normal (Contoh: "Validasi SKS: OK").
-    * **WARNING:** Mencatat validasi yang gagal (Contoh: "SKS melebihi batas").
-    * **ERROR:** Mencatat kegagalan fatal saat registrasi ditolak.
+Fokus utama dari tugas ini bukanlah mengubah logika bisnis (yang sudah menerapkan prinsip SOLID dari pertemuan sebelumnya), melainkan mengubah kode agar siap produksi (Production-Ready). Kode ini dirancang agar mudah dibaca oleh pengembang lain melalui dokumentasi inline dan mudah dilacak aktivitasnya melalui sistem logging yang terstruktur.
+
+## Struktur File
+
+1. **registrasi_logging.py (Tugas Mandiri)**
+   Sistem Validasi KRS Mahasiswa. File ini menerapkan logging untuk setiap aturan validasi:
+   - Validasi batas SKS.
+   - Validasi mata kuliah prasyarat.
+   - Validasi jadwal bentrok.
+
+2. **order_logging.py (Latihan Praktikum)**
+   Sistem Checkout E-Commerce. File ini menerapkan logging untuk proses pembayaran kartu kredit dan pengiriman notifikasi email.
+
+3. **README.md**
+   Dokumentasi teknis yang menjelaskan cara kerja proyek ini.
+
+---
+
+## Fitur dan Implementasi Teknis
+
+### 1. Sistem Logging (Pengganti Print)
+Seluruh output terminal kini menggunakan modul `logging` bawaan Python dengan format waktu yang presisi:
+Format: `%(asctime)s %(levelname)s - %(name)s - %(message)s`
+
+Penerapan Level Log:
+- **INFO:** Digunakan untuk mencatat alur normal. Contoh: "Validasi SKS: OK".
+- **WARNING:** Digunakan saat aturan bisnis dilanggar. Contoh: "Validasi Gagal: SKS melebihi batas".
+- **ERROR:** Digunakan saat proses registrasi ditolak sepenuhnya.
 
 ### 2. Google Style Docstrings
-Setiap Kelas, Interface, dan Metode pada kedua file telah dilengkapi dokumentasi inline.
-* **Deskripsi:** Penjelasan singkat tentang tanggung jawab kelas/fungsi.
-* **Args:** Penjelasan tipe data dan kegunaan parameter input.
-* **Returns:** Penjelasan nilai yang dikembalikan oleh fungsi.
-
-### 3. Cara Menjalankan
-1. Buka terminal atau command prompt.
-2. Masuk ke direktori folder proyek ini:
-   ```bash
-   cd PBO_Praktikum/Pertemuan_12
+Setiap Kelas, Interface, dan Method dilengkapi dokumentasi standar industri dengan format Google Style.
+- **Args:** Menjelaskan tipe data parameter input.
+- **Returns:** Menjelaskan nilai kembalian fungsi.
+- **Description:** Penjelasan singkat tujuan fungsi.
