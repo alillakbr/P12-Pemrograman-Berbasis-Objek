@@ -20,8 +20,7 @@ Setiap Kelas, Interface, dan Metode pada kedua file telah dilengkapi dokumentasi
 * **Args:** Penjelasan tipe data dan kegunaan parameter input.
 * **Returns:** Penjelasan nilai yang dikembalikan oleh fungsi.
 
-###
-3. Cara Menjalankan
+### 3. Cara Menjalankan
 1. Buka terminal atau command prompt.
 2. Masuk ke direktori folder proyek ini:
    ```bash
